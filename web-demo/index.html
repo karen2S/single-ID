@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SID Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="formbold-main-wrapper">
+    <div class="formbold-form-wrapper">
+      
+      <img class="welcome-img" src="images/vector.png" alt="Vector Image">
+      
+      <form method="POST" id="customerForm" action="register.php">
+        <div class="formbold-form-title">
+          <h2 class="">Aplikasi Kredit Customer</h2>
+          <p>
+            Please fill out the form with the customer's personal details.
+          </p>
+        </div>
+  
+        <div class="formbold-input-flex">
+          <div id="input-name">
+            <label for="fullName" class="formbold-form-label">
+              Nama Lengkap
+            </label>
+            <input
+              type="text"
+              name="fullName"
+              id="fullName"
+              class="formbold-form-input"
+              style="text-transform: uppercase;"
+              required
+            />
+          </div>
+          <div>
+            <label for="date_valid" class="formbold-form-label"> Tanggal Valid </label>
+            <input 
+              type="date" 
+              name="date_valid" 
+              id="date_valid" 
+              class="formbold-form-input"
+              required
+            />
+          </div>
+        </div>
+        
+        <div class="formbold-input-flex">
+          <div id="input-mother">
+            <label for="motherName" class="formbold-form-label">
+              Nama Ibu Kandung
+            </label>
+            <input
+              type="text"
+              name="motherName"
+              id="motherName"
+              class="formbold-form-input"
+              style="text-transform: uppercase;"
+              required
+            />
+          </div>
+        
+          <div class="formbold-input-radio-wrapper">
+            <label for="sex" class="formbold-form-label"> SEX </label>
+            <div class="formbold-radio-flex">
+              <div class="formbold-radio-group">
+                <label class="formbold-radio-label">
+                  <input class="formbold-input-radio" type="radio" name="sex" id="sexMale" value="M">
+                  Pria
+                  <span class="formbold-radio-checkmark"></span>
+                </label>
+              </div>
+        
+              <div class="formbold-radio-group">
+                <label class="formbold-radio-label">
+                  <input class="formbold-input-radio" type="radio" name="sex" id="sexFemale" value="F">
+                  Wanita
+                  <span class="formbold-radio-checkmark"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="formbold-input-flex">
+          <div>
+            <label for="nik" class="formbold-form-label"> NIK / KITAS </label>
+            <input
+              type="text"
+              name="nik"
+              id="nik"
+              class="formbold-form-input"
+              maxlength="16"
+              minlength="11"
+              pattern="\d{11,16}"
+            />
+          </div>
+          <div>
+            <label for="npwp" class="formbold-form-label"> NPWP </label>
+            <input
+              type="text"
+              name="npwp"
+              id="npwp"
+              class="formbold-form-input"
+              pattern="\d{15,16}"
+              maxlength="16"
+              minlength="15"
+            />
+          </div>
+        </div>
+        
+        <div class="formbold-input-flex">
+          <div>
+            <label for="placeOfBirth" class="formbold-form-label"> Tempat Lahir </label>
+            <input
+              type="text"
+              name="placeOfBirth"
+              id="placeOfBirth"
+              class="formbold-form-input"
+              style="text-transform: uppercase;"
+              required
+            />
+          </div>
+          <div>
+            <label for="dob" class="formbold-form-label"> Tanggal Lahir </label>
+            <input 
+              type="date" 
+              name="dob"
+              id="dob" 
+              class="formbold-form-input"
+              required
+            />
+          </div>
+        </div>
+        
+        <div class="formbold-mb-3">
+          <label for="address" class="formbold-form-label">
+            Alamat Rumah
+          </label>
+          <input
+            type="text"
+            name="address"
+            id="address"
+            class="formbold-form-input"
+            style="text-transform: uppercase;"
+            required
+          />
+        </div>
+        
+        <div class="formbold-input-flex">
+          <div>
+            <label for="branchCode" class="formbold-form-label"> Cabang </label>
+            <select name="branchCode" id="branchCode" class="formbold-form-input">
+              <option value="" selected>Pilih Cabang</option>
+              <option value="600701">BALIKPAPAN</option>
+              <option value="500578">BANDA ACEH</option>
+              <option value="500574">BANDARJAYA</option>
+              <option value="200202">BANDUNG</option>
+              <option value="200205">BANDUNG 2</option>
+              <option value="200207">BANDUNG 3</option>
+              <option value="600703">BANJARMASIN</option>
+              <option value="500571">BATAM</option>
+              <option value="100172">BEKASI</option>
+              <option value="500508">BENGKULU</option>
+              <option value="100178">BINTARO</option>
+              <option value="200201">BOGOR</option>
+              <option value="500572">BUKIT TINGGI</option>
+              <option value="100191">C2C-TBS</option>
+              <option value="200273">CIBINONG</option>
+              <option value="100194">CIBUBUR</option>
+              <option value="100192">CIDENG</option>
+              <option value="100195">CIKARANG</option>
+              <option value="200203">CIREBON</option>
+              <option value="400601">DENPASAR</option>
+              <option value="100173">DEPOK</option>
+              <option value="500576">DURI</option>
+              <option value="100103">FATMAWATI</option>
+              <option value="600872">GORONTALO</option>
+              <option value="400471">GRESIK</option>
+              <option value="100197">HARAPAN INDAH</option>
+              <option value="500505">JAMBI</option>
+              <option value="600901">JAYAPURA</option>
+              <option value="400404">JEMBER</option>
+              <option value="300302">JOGYAKARTA</option>
+              <option value="100176">KALIMALANG</option>
+              <option value="100164">KARAWACI</option>
+              <option value="200272">KARAWANG</option>
+              <option value="100163">KEBUN JERUK</option>
+              <option value="400403">KEDIRI</option>
+              <option value="100106">KELAPA GADING</option>
+              <option value="600871">KENDARI</option>
+              <option value="300371">KUDUS</option>
+              <option value="100102">KWITANG</option>
+              <option value="500504">LAMPUNG</option>
+              <option value="300372">MAGELANG</option>
+              <option value="400402">MALANG</option>
+              <option value="600802">MANADO</option>
+              <option value="400602">MATARAM</option>
+              <option value="500509">MEDAN</option>
+              <option value="500520">MEDAN 2</option>
+              <option value="500522">MEDAN 3</option>
+              <option value="500575">MUARA BUNGO</option>
+              <option value="500510">PADANG</option>
+              <option value="500506">PAKANBARU</option>
+              <option value="600706">PALANGKARAYA</option>
+              <option value="500503">PALEMBANG</option>
+              <option value="500521">PALEMBANG 2</option>
+              <option value="600803">PALU</option>
+              <option value="100193">PANCORAN</option>
+              <option value="500573">PANGKAL PINANG</option>
+              <option value="600873">PARE-PARE</option>
+              <option value="100177">PLUIT</option>
+              <option value="100196">PONDOK CABE</option>
+              <option value="600702">PONTIANAK</option>
+              <option value="300304">PURWOKERTO</option>
+              <option value="500579">RANTAU PRAPAT</option>
+              <option value="400603">RENON</option>
+              <option value="600705">SAMARINDA</option>
+              <option value="300301">SEMARANG</option>
+              <option value="100174">SERANG</option>
+              <option value="300303">SOLO</option>
+              <option value="200210">SUKABUMI</option>
+              <option value="400401">SURABAYA</option>
+              <option value="400405">SURABAYA 2</option>
+              <option value="400407">SURABAYA 3</option>
+              <option value="100162">TANGERANG</option>
+              <option value="200209">TASIKMALAYA</option>
+              <option value="300306">TEGAL</option>
+              <option value="600801">UJUNG PANDANG</option>
+              <option value="100121">WTC MANGGA DUA</option>
+            </select>
+          </div>          
+
+          <div class="formbold-input-radio-wrapper">
+            <label for="maritalStatus" class="formbold-form-label"> Status Pernikahan </label>
+            <div class="formbold-radio-flex">
+              <div class="formbold-radio-group">
+                <label class="formbold-radio-label">
+                  <input class="formbold-input-radio" type="radio" name="maritalStatus" id="married" value="married">
+                  Menikah
+                  <span class="formbold-radio-checkmark"></span>
+                </label>
+              </div>
+          
+              <div class="formbold-radio-group">
+                <label class="formbold-radio-label">
+                  <input class="formbold-input-radio" type="radio" name="maritalStatus" id="single" value="single">
+                  Lajang
+                  <span class="formbold-radio-checkmark"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="center-content">
+          <button type="submit" id="submitButton" class="formbold-btn">Register Now</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script>
+    // Set today's date in YYYY-MM-DD format
+    const today = new Date().toISOString().split('T')[0];
+    document.getElementById('date_valid').value = today;
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
